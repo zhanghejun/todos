@@ -1,0 +1,116 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative; }
+
+.todo {
+  width: 414px;
+  height: 60px;
+  margin: 0 auto; }
+  .todo h2 {
+    height: 60px;
+    line-height: 60px;
+    font-size: 50px;
+    font-family: '微软雅黑';
+    font-weight: 100;
+    text-align: center; }
+
+.card {
+  width: 380px;
+  height: auto;
+  margin: 0 auto; }
+  .card .header {
+    width: 100%;
+    height: 40px;
+    background: green;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc; }
+    .card .header input {
+      border: none;
+      width: 100%;
+      height: 100%;
+      text-indent: 20px; }
+  .card .todos {
+    width: 380px;
+    height: auto;
+    margin: 0 auto; }
+    .card .todos .row {
+      width: 100%;
+      height: 40px;
+      margin: 0 auto;
+      border-bottom: 1px solid #ccc; }
+      .card .todos .row .check {
+        float: left;
+        width: 40px;
+        height: 40px;
+        background: url(../img/20140531120644801.jpg) no-repeat center center;
+        background-size: 100%; }
+      .card .todos .row p {
+        width: 340px;
+        line-height: 40px;
+        float: left;
+        text-indent: 20px; }
+      .card .todos .row .delete {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: url(../img/cuo.png) no-repeat center center;
+        background-size: 100%; }
+      .card .todos .row input {
+        display: none;
+        width: 340px;
+        margin-left: 40px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        height: 40px;
+        line-height: 40px; }
+    .card .todos .row.wancheng .check {
+      background: url(../img/wan.png) no-repeat center center;
+      background-size: 60%; }
+    .card .todos .row.wancheng p {
+      color: #ccc;
+      text-decoration: line-through; }
+    .card .todos .row.bianji .check {
+      display: none; }
+    .card .todos .row.bianji p {
+      display: none; }
+    .card .todos .row.bianji input {
+      display: block; }
+
+.footer {
+  width: 100%;
+  height: 50px; }
+  .footer .left {
+    float: left;
+    width: 35px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px; }
+  .footer span {
+    display: block;
+    width: auto;
+    margin-top: 10px;
+    height: 28px;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    padding: 0 10px;
+    margin-left: 10px;
+    border: 1px solid #000;
+    cursor: pointer; }
+  .footer .clear {
+    float: right;
+    width: auto;
+    height: 50px;
+    text-align: center;
+    line-height: 50px; }
+
+.footer span.active {
+  background: red; }

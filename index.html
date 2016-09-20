@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="todo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=414px",user-scalable=no>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <!--<script src="js/index.js"></script>-->
+    <script src="js/angularjs/angular.js"></script>
+    <script src="js/angularjs/angular-animate.js"></script>  
+    <script src="js/main.js"></script>
+</head>
+<body ng-controller="mainCtil">
+	<!--<input type="text" ng-model="hello"/>
+	<p>{{hello}}</p>-->
+	<h2 ng-click="bb()" style="cursor:pointer;">{{aa}}</h2>
+	<ul>
+		<li ng-repeat="v in musics">
+			<span>{{v.name}}</span>
+			<span>{{v.ming}}</span>
+			<span ng-click="cc($index)" style="cursor: pointer;">x</span>
+		</li>
+	</ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<div class="todo">
+      <h2 ng-bind="title"></h2>
+  
+<div class="card">
+        <div class="header">
+            <input type="text" placeholder="请输入" ng-keyup="add($event);save()" ng-model="name">
+        </div> 
+        <ul class="todos" ng-init="tiaojian='' ">
+
+            <li ng-dblclick="vv=true;focus($event);save()" ng-class="{bianji:vv,wancheng:v.isDone}" ng-init="vv=false" class="row" ng-repeat="v in todos|filter:{isDone:tiaojian} track by v.id">
+                <div class="check" ng-click="v.isDone=!v.isDone;save()"></div>
+                <p ng-bind="v.name"></p>
+                <div class="delete" ng-click="del(v.id);save()"></div>
+                <input type="text" ng-blur="vv=false;save()" ng-model="v.name">
+            </li>
+            <div class="footer">
+            	<div class="left" ng-bind="(todos|filter:{isDone:tiaojian}).length"></div>
+            	<div class="clear" ng-click="clear()">清除已完成</div>
+            <span ng-click="tiaojian=''">查看全部</span>
+            <span ng-click="tiaojian=false">未完成</span>
+            <span ng-click="tiaojian=true" >已完成</span>
+            </div>
+        </ul>
+</div>
+</div>
+         
+
+</body>
+</html>
